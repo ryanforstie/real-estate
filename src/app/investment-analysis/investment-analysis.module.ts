@@ -1,14 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { InvestmentAnalysisRoutingModule } from './investment-analysis-routing.module';
-
+import { InvestmentAnalysisRoutingModule } from "./investment-analysis-routing.module";
+import { GetInvestmentPerformanceComponent } from "./get-investment-performance/get-investment-performance.component";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    InvestmentAnalysisRoutingModule
-  ]
+  declarations: [GetInvestmentPerformanceComponent],
+  imports: [CommonModule, InvestmentAnalysisRoutingModule],
+  exports: [GetInvestmentPerformanceComponent]
 })
-export class InvestmentAnalysisModule { }
+export class InvestmentAnalysisModule {}
