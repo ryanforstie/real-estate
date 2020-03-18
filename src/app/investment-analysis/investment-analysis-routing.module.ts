@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { GetInvestmentPerformanceComponent } from "./get-investment-performance/get-investment-performance.component";
+import { InvestmentAnalysisRootComponent } from "./investment-analysis-root/investment-analysis-root.component";
 
 const routes: Routes = [
-  { path: "", component: GetInvestmentPerformanceComponent }
+  { path: "", component: InvestmentAnalysisRootComponent }
 ];
 
 @NgModule({

@@ -3,9 +3,13 @@ import { CommonModule } from "@angular/common";
 
 import { InvestmentAnalysisRoutingModule } from "./investment-analysis-routing.module";
 import { GetInvestmentPerformanceComponent } from "./get-investment-performance/get-investment-performance.component";
+import { InvestmentAnalysisRootComponent } from "./investment-analysis-root/investment-analysis-root.component";
 
 @NgModule({
-  declarations: [GetInvestmentPerformanceComponent],
+  declarations: [
+    GetInvestmentPerformanceComponent,
+    InvestmentAnalysisRootComponent
+  ],
   imports: [CommonModule, InvestmentAnalysisRoutingModule],
   exports: []
 })
