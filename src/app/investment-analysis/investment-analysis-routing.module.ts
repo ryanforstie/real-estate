@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { GetInvestmentPerformanceComponent } from "./get-investment-performance/get-investment-performance.component";
 
 const routes: Routes = [
-  { path: "investment-analysis", component: GetInvestmentPerformanceComponent }
+  { path: "", component: GetInvestmentPerformanceComponent }
 ];
 
 @NgModule({
