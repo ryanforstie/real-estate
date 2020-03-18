@@ -7,6 +7,6 @@ import { GetCityTopPropertiesComponent } from "./get-city-top-properties/get-cit
 @NgModule({
   declarations: [GetCityTopPropertiesComponent],
   imports: [CommonModule, SearchRoutingModule],
-  exports: [GetCityTopPropertiesComponent]
+  exports: []
 })
 export class SearchModule {}

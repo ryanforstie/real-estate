@@ -7,6 +7,6 @@ import { GetCitySummaryComponent } from "./get-city-summary/get-city-summary.com
 @NgModule({
   declarations: [GetCitySummaryComponent],
   imports: [CommonModule, TrendsRoutingModule],
-  exports: [GetCitySummaryComponent]
+  exports: []
 })
 export class TrendsModule {}

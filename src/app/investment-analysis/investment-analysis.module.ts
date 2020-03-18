@@ -7,6 +7,6 @@ import { GetInvestmentPerformanceComponent } from "./get-investment-performance/
 @NgModule({
   declarations: [GetInvestmentPerformanceComponent],
   imports: [CommonModule, InvestmentAnalysisRoutingModule],
-  exports: [GetInvestmentPerformanceComponent]
+  exports: []
 })
 export class InvestmentAnalysisModule {}

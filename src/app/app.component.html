@@ -1,5 +1,12 @@
-<app-get-city-top-properties></app-get-city-top-properties>
-<app-get-investment-performance></app-get-investment-performance>
-<app-get-city-summary></app-get-city-summary>
-
-<router-outlet></router-outlet>
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a routerLink="/search" routerLinkActive="active" class="item">Search</a>
+    <a routerLink="/trends" routerLinkActive="active" class="item">Trends</a>
+    <a routerLink="/investment-analysis" routerLinkActive="active" class="item"
+      >Invesment Analysis</a
+    >
+  </div>
+  <div class="ui segment">
+    <router-outlet></router-outlet>
+  </div>
+</div>
