@@ -1,1 +1,4 @@
-<p>get-city-top-properties works!</p>
+<form (submit)="onFormSubmit($event)">
+  <input (input)="state = $event.target.value" />
+  <!-- <input (input)="city = $event.target.value" /> -->
+</form>
