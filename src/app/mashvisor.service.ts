@@ -1,6 +1,11 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-// import { url } from "inspector";
+
+interface MashvisorResponse {
+  content: {
+    median_price: number;
+  };
+}
 
 @Injectable({
   providedIn: "root"
@@ -10,8 +15,8 @@ export class MashvisorService {
 
   search(state: string) {
     let url: string =
-      "https://cors-anywhere.herokuapp.com/https://api.mashvisor.com/v1.1/client/city/investment/";
-    return this.http.get(url + state + "/Los%20Angeles", {
+      "https://cors-anywhere.herokuapp.com/https://api.mashvisor.com/v1.1/client/city/properties/";
+    return this.http.get<MashvisorResponse>(url + state + "/Seattle", {
       headers: {
         "x-api-key": "db7799e3-50f9-4754-9439-89aa0a2eb319"
       }

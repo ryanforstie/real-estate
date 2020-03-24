@@ -7,12 +7,15 @@ import { MashvisorService } from "../../mashvisor.service";
   styleUrls: ["./search-root.component.css"]
 })
 export class SearchRootComponent implements OnInit {
+  medianPrice: number;
+
   constructor(private mashvisor: MashvisorService) {}
 
   ngOnInit(): void {}
 
   onState(state: string) {
     this.mashvisor.search(state).subscribe(response => {
+      // this.medianPrice = response.content.median_price;
       console.log(response);
     });
   }
