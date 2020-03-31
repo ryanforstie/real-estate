@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output, Input } from "@angular/core";
 
 @Component({
   selector: "app-get-city-top-properties",
@@ -7,6 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 })
 export class GetCityTopPropertiesComponent implements OnInit {
   @Output() submitted = new EventEmitter<string>();
+  @Input() properties = [];
   state = "";
   city = "";
 

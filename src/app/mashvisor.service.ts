@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 
 interface MashvisorResponse {
   content: {
-    median_price: number;
+    properties: [];
   };
 }
 

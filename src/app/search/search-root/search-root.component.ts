@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { MashvisorService } from "../../mashvisor.service";
 
 @Component({
@@ -7,7 +7,7 @@ import { MashvisorService } from "../../mashvisor.service";
   styleUrls: ["./search-root.component.css"]
 })
 export class SearchRootComponent implements OnInit {
-  medianPrice: number;
+  @Input() properties: [];
 
   constructor(private mashvisor: MashvisorService) {}
 
@@ -15,7 +15,7 @@ export class SearchRootComponent implements OnInit {
 
   onState(state: string) {
     this.mashvisor.search(state).subscribe(response => {
-      // this.medianPrice = response.content.median_price;
+      this.properties = response.content.properties;
       console.log(response);
     });
   }

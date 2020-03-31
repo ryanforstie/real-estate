@@ -2,3 +2,7 @@
   <input (input)="state = $event.target.value" />
   <!-- <input (input)="city = $event.target.value" /> -->
 </form>
+
+<div *ngFor="let property of properties">
+  {{ property.address }}
+</div>
