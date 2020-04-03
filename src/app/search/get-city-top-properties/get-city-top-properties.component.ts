@@ -6,17 +6,17 @@ import { Component, OnInit, EventEmitter, Output, Input } from "@angular/core";
   styleUrls: ["./get-city-top-properties.component.css"]
 })
 export class GetCityTopPropertiesComponent implements OnInit {
-  @Output() submitted = new EventEmitter<string>();
+  @Output() submitted = new EventEmitter<object>();
   @Input() properties = [];
-  state = "";
-  city = "";
+  state: string = "";
+  city: string = "";
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onFormSubmit(event: any) {
+  onFormSubmit() {
     event.preventDefault();
-    this.submitted.emit(this.state);
+    this.submitted.emit({ state: this.state, city: this.city });
   }
 }

@@ -1,6 +1,7 @@
-<form (submit)="onFormSubmit($event)">
-  <input (input)="state = $event.target.value" />
-  <!-- <input (input)="city = $event.target.value" /> -->
+<form (ngSubmit)="onFormSubmit()" #searchTopPropertiesForm="ngForm">
+  <input required name="state" [(ngModel)]="state" />
+  <input required name="city" [(ngModel)]="city" />
+  <button [disabled]="searchTopPropertiesForm.invalid">Submit</button>
 </form>
 
 <div *ngFor="let property of properties">

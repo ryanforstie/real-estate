@@ -13,10 +13,10 @@ interface MashvisorResponse {
 export class MashvisorService {
   constructor(private http: HttpClient) {}
 
-  search(state: string) {
+  search(state: string, city: string) {
     let url: string =
       "https://cors-anywhere.herokuapp.com/https://api.mashvisor.com/v1.1/client/city/properties/";
-    return this.http.get<MashvisorResponse>(url + state + "/Seattle", {
+    return this.http.get<MashvisorResponse>(url + state + "/" + city, {
       headers: {
         "x-api-key": "db7799e3-50f9-4754-9439-89aa0a2eb319"
       }
