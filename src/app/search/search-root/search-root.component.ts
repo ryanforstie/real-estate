@@ -13,10 +13,12 @@ export class SearchRootComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onState(state: string) {
-    this.mashvisor.search(state).subscribe(response => {
-      this.properties = response.content.properties;
-      console.log(response);
-    });
+  onSearch(searchTerms: any) {
+    this.mashvisor
+      .search(searchTerms.state, searchTerms.city)
+      .subscribe(response => {
+        this.properties = response.content.properties;
+        console.log(response);
+      });
   }
 }
