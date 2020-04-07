@@ -1,9 +1,73 @@
+<h1 class="ui header">Search For Top City Properties</h1>
+
 <form (ngSubmit)="onFormSubmit()" #searchTopPropertiesForm="ngForm">
-  <input required name="state" [(ngModel)]="state" />
-  <input required name="city" [(ngModel)]="city" />
-  <button [disabled]="searchTopPropertiesForm.invalid">Submit</button>
+  <div class="ui inverted segment">
+    <div class="ui inverted form">
+      <div class="two fields">
+        <div class="field">
+          <label>State</label>
+          <input
+            required
+            type="text"
+            placeholder="WA"
+            name="state"
+            [(ngModel)]="state"
+          />
+        </div>
+        <div class="field">
+          <label>City</label>
+          <input
+            required
+            type="text"
+            placeholder="Seattle"
+            name="city"
+            [(ngModel)]="city"
+          />
+        </div>
+      </div>
+      <button
+        class="ui primary button"
+        [disabled]="searchTopPropertiesForm.invalid"
+      >
+        Search
+      </button>
+    </div>
+  </div>
 </form>
 
-<div *ngFor="let property of properties">
-  {{ property.address }}
+<div class="ui two column grid" *ngFor="let property of properties">
+  <div class="column">
+    <img class="ui fluid image" [src]="property.image_url" />
+  </div>
+  <div class="column">
+    <div class="ui two column grid">
+      <div class="column">{{ property.address }}</div>
+      <div class="column">{{ property.neighborhood }}</div>
+    </div>
+    <div class="ui four column grid">
+      <div class="column">{{ property.zip }}</div>
+      <div class="column">{{ property.city }}</div>
+      <div class="column">{{ property.county }}</div>
+      <div class="column">{{ property.state }}</div>
+    </div>
+    <div class="column">{{ property.type }}</div>
+    <div class="ui two column grid">
+      <div class="column">{{ property.list_price_formatted }}</div>
+      <div class="column">{{ property.price_per_sqft }}</div>
+    </div>
+    <div class="ui three column grid">
+      <div class="column">{{ property.baths }}</div>
+      <div class="column">{{ property.beds }}</div>
+      <div class="column">{{ property.sqft }}</div>
+    </div>
+    <div class="ui two column grid">
+      <div class="column">{{ property.days_on_market }}</div>
+      <div class="column">{{ property.mls_id }}</div>
+    </div>
+    <div class="ui three column grid">
+      <div class="column">{{ property.traditional_rental }}</div>
+      <div class="column">{{ property.airbnb_rental }}</div>
+      <div class="column">{{ property.traditional_cap }}</div>
+    </div>
+  </div>
 </div>
