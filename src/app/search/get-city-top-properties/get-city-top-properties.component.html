@@ -35,39 +35,92 @@
   </div>
 </form>
 
+<div class="ui hidden divider"></div>
 <div class="ui two column grid" *ngFor="let property of properties">
   <div class="column">
     <img class="ui fluid image" [src]="property.image_url" />
   </div>
   <div class="column">
+    <h2 class="ui dividing header">Property Information</h2>
+    <h3 class="ui header">Location</h3>
     <div class="ui two column grid">
-      <div class="column">{{ property.address }}</div>
-      <div class="column">{{ property.neighborhood }}</div>
-    </div>
-    <div class="ui four column grid">
-      <div class="column">{{ property.zip }}</div>
-      <div class="column">{{ property.city }}</div>
-      <div class="column">{{ property.county }}</div>
-      <div class="column">{{ property.state }}</div>
-    </div>
-    <div class="column">{{ property.type }}</div>
-    <div class="ui two column grid">
-      <div class="column">{{ property.list_price_formatted }}</div>
-      <div class="column">{{ property.price_per_sqft }}</div>
+      <div class="column">
+        <span class="ui tiny header">Address: </span>{{ property.address }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Zip: </span>{{ property.zip }}
+      </div>
     </div>
     <div class="ui three column grid">
-      <div class="column">{{ property.baths }}</div>
-      <div class="column">{{ property.beds }}</div>
-      <div class="column">{{ property.sqft }}</div>
+      <div class="column">
+        <span class="ui tiny header">City: </span>{{ property.city }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">County: </span>{{ property.county }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">State: </span>{{ property.state }}
+      </div>
     </div>
+    <div class="ui divider"></div>
+    <h3 class="ui header">Details</h3>
     <div class="ui two column grid">
-      <div class="column">{{ property.days_on_market }}</div>
-      <div class="column">{{ property.mls_id }}</div>
+      <div class="column">
+        <span class="ui tiny header">Neighborhood: </span
+        >{{ property.neighborhood }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Type: </span>{{ property.type }}
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <h3 class="ui header">Financials</h3>
+    <div class="ui two column grid">
+      <div class="column">
+        <span class="ui tiny header">Price: </span
+        >{{ property.list_price_formatted }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Sqft Price: </span
+        >{{ property.price_per_sqft }}
+      </div>
     </div>
     <div class="ui three column grid">
-      <div class="column">{{ property.traditional_rental }}</div>
-      <div class="column">{{ property.airbnb_rental }}</div>
-      <div class="column">{{ property.traditional_cap }}</div>
+      <div class="column">
+        <span class="ui tiny header">Beds: </span>{{ property.beds }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Baths: </span>{{ property.baths }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Sqft: </span>{{ property.sqft }}
+      </div>
     </div>
+    <div class="ui two column grid">
+      <div class="column">
+        <span class="ui tiny header">Days On Market: </span
+        >{{ property.days_on_market }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">MLS Id: </span>{{ property.mls_id }}
+      </div>
+    </div>
+    <div class="ui three column grid">
+      <div class="column">
+        <span class="ui tiny header">Rental Rate: </span
+        >{{ property.traditional_rental }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Airbnb Rate: </span
+        >{{ property.airbnb_rental }}
+      </div>
+      <div class="column">
+        <span class="ui tiny header">Cap Rate: </span
+        >{{ property.traditional_cap }}
+      </div>
+    </div>
+    <div class="ui hidden divider"></div>
+    <div class="ui divider"></div>
+    <div class="ui hidden divider"></div>
   </div>
 </div>
