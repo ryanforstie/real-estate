@@ -1,1 +1,4 @@
-<app-list-top-markets></app-list-top-markets>
+<app-list-top-markets
+  (submitted)="onTopMarketSearch($event)"
+  [contents]="contents"
+></app-list-top-markets>

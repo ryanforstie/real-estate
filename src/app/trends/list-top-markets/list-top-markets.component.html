@@ -1,1 +1,39 @@
-<p>list-top-markets works!</p>
+<h1 class="ui header">List Top State Markets</h1>
+
+<form (ngSubmit)="onFormSubmit()" #listTopMarketsForm="ngForm">
+  <div class="ui inverted segment">
+    <div class="ui inverted form">
+      <div class="one fields">
+        <div class="field">
+          <label>State</label>
+          <input
+            required
+            type="text"
+            placeholder="WA"
+            name="state"
+            [(ngModel)]="state"
+          />
+        </div>
+      </div>
+      <button class="ui primary button" [disabled]="listTopMarketsForm.invalid">
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+
+<div class="ui hidden divider"></div>
+<table *ngIf="contents.length > 0" class="ui celled table">
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Homes For Sale</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let content of contents">
+    <tr>
+      <td data-label="Location">{{ content.smart_location }}</td>
+      <td data-label="Homes-For-Sale">{{ content.homes_for_sale }}</td>
+    </tr>
+  </tbody>
+</table>
